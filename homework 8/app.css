@@ -1,0 +1,136 @@
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family:Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color:black;
+    box-shadow: 25px 25px 75px rgba(200, 200, 200, 0.50),
+    inset 5px 5px 10px rgba(200, 200, 200, 0.50),
+    inset 5px 5px 20px  rgba(200, 200, 200, 0.50),
+    inset -5px -5px 15px rgba(200, 200, 200, 0.50);
+}
+
+.app-box {
+    position: relative;
+    width: 1000px;
+    height: 600px;
+    border-radius: 64px;
+    background: black;
+    padding: 30px 50px;
+}
+
+h2 {
+    width: 100%;
+    font-weight: 700;
+    text-align: center;
+    color:whitesmoke;
+    font-size: 36px;
+    margin-bottom: 26px;
+}
+
+#app-input {
+    position: relative;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 15px 25px;
+    border-radius: 28px;
+    font-size: 16px;
+}
+
+.app-box li {
+    position: relative;
+    width: calc(100% - 40px);
+    display: flex;
+    align-items: center;
+    background:midnightblue;
+    margin: 15px 0;
+    padding: 10px 10px 10px 40px;
+    min-height: 45px;
+    cursor: pointer;
+    border-radius: 22px;
+    color: white;
+}
+
+.app-box li i {
+    position: absolute;
+    right: -40px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    border-radius: 50%;
+}
+
+.app-box li i::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background: white;
+    transform: rotate(45deg);
+}
+
+.app-box li i::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background: white;
+    transform: rotate(-45deg);
+}
+
+.app-box li::before {
+content: '';
+position: absolute;
+left: 8px;
+width: 30px;
+height: 30px;
+background: black;
+border-radius: 50%;
+}
+
+
+.app-box li.done {
+    background:dimgray;
+}
+
+.app-box li.done::after {
+    content: '';
+    position: absolute;
+    left: 16px;
+    width: 12px;
+    height: 6px;
+    border-left: 2px solid whitesmoke;
+    border-bottom: 2px solid whitesmoke;
+    transform: rotate(315deg);
+}
+
+#app-list {
+    position: relative;
+    margin-top: 20px;
+    height: 300px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 15px black;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: whitesmoke;
+}
